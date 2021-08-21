@@ -1,0 +1,73 @@
+<ng-container *ngIf="isPaintingLoaded">
+    <div class="container home wrapper  my-md-5 pl-md-5">
+      <div class=" d-md-flex flex-mb-equal">
+        <form (ngSubmit)="onSubmit()" [formGroup]="editForm" class="form-idea col-md-9">
+          <div class="text-center col-md">
+            <h1 class="h3 mb-3 font-weight-normal">Edit Your Painting Info</h1>
+          </div>
+          <div class="form-label-group formGroupItem">
+            <label for="paintingTitle">Title</label>
+            <input type="text" id="title" name="title" class="form-control" placeholder="Title of the Painting" required
+              minlength="6" formControlName="title" (value)="painting.title">
+  
+            <div *ngIf="this.editForm.controls.title.errors != null">
+              <div *ngIf="this.editForm.controls.title.errors?.required && this.editForm.controls.title.touched">
+                <p class="text-danger">Please give painting a title!</p>
+              </div>
+              <div
+                *ngIf="this.editForm.controls.title.errors?.minlength?.actuallength !== 6 && this.editForm.controls.title.touched">
+                <p class="text-danger">Your title must be at least 6 charachter long!</p>
+              </div>
+            </div>
+          </div>
+          <div class="form-label-group formGroupItem">
+            <label for="paintingDescription">Description</label>
+            <textarea type="text" name="description" class="form-control" placeholder="Description..." required
+              minlength="10" formControlName="description"></textarea>
+            <div *ngIf="this.editForm.controls.description.errors != null">
+              <div
+                *ngIf="this.editForm.controls.description.errors?.required && this.editForm.controls.description.touched">
+                <p class="text-danger">Please give your painting a description!</p>
+              </div>
+              <div
+                *ngIf="this.editForm.controls.description.errors?.minlength?.actuallength !== 10 && this.editForm.controls.description.touched">
+                <p class="text-danger">Your description must be at least 10 charachter long!</p>
+              </div>
+            </div>
+          </div>
+          <div class="form-label-group formGroupItem">
+            <label for="inputURL">Add Painting Image</label>
+            <input type="text" id="imageURl" name="imageURL" class="form-control"
+              placeholder="https://anything.com/example.jpg" required pattern="^https*:\/\/.*" formControlName="imageURL">
+  
+            <div *ngIf="this.editForm.controls.imageURL.errors != null">
+              <div *ngIf="this.editForm.controls.imageURL.errors?.required && 
+                            this.editForm.controls.imageURL.touched">
+                <p class="text-danger"> URL is required!</p>
+              </div>
+              <div
+                *ngIf="!this.editForm.controls.imageURL.errors?.pattern?.pattern && this.editForm.controls.imageURL.touched">
+                <p class="text-danger">Invalid URL!</p>
+              </div>
+            </div>
+  
+            <div>
+              <Label class="row mt-5">Preview of image:</Label>
+              <div *ngIf="this.editForm.controls.imageURL.value" class="row">
+                <img class="responsive-ideas create" src="{{this.editForm.controls.imageURL.value}}" alt="">
+              </div>
+            </div>
+  
+            <div *ngIf="!loading" class="mt-5 mb-5">
+              <button [disabled]="this.editForm.invalid" class="btn btn-lg btn-block text-dark" type="submit">Edit</button>
+            </div>
+            <div *ngIf="loading" class="mt-5 mb-5">
+              <button class="btn btn-lg btn-block" type="submit">
+                <app-loader></app-loader>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </ng-container>

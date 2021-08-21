@@ -1,0 +1,59 @@
+main {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 3em auto;
+    width: 80%;
+}
+
+p {
+    padding: 0;
+    margin: 0;
+}
+
+hr {
+    color: black;
+    border:2px solid black;
+    width: 100%;
+}
+
+#imageDiv {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    text-align: center;
+}
+#imageDiv img{
+    width: 70%;
+    box-shadow: -10px 10px 5px -4px rgba(255, 189, 75, 0.424);
+    border-radius: 15px;
+}
+
+#btnDiv {
+    width: 60%;
+}
+
+#editButton{
+    width: 80%;
+    margin: 1em auto;
+    padding: 0.3em 1em;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+#editButton:hover{
+    background-color: rgba(255, 157, 0, 0.959);
+    transition: background-color 0.3s;
+}
+
+#imagePreview img{
+    width: 40%;
+}
+
+#editButton{
+    outline: none;
+}
+
+.link {
+    display: block;
+}

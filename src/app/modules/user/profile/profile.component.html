@@ -1,0 +1,51 @@
+<main *ngIf="!IsEditing">
+    <div id="imageDiv">
+        <img src="{{photo}}" alt="ProfilePicture">
+        <button id="editButton" (click)="toggleEdit()">Update profile image</button>
+    </div>
+
+    <div id="infoDiv">
+        <section>
+            <h3>Username: <span class="font-weight-bold">{{username}}</span></h3>
+        </section>
+
+        <section *ngIf="!this.isEntitiesLoaded">
+            <p>Loading paintings...</p>
+        </section>
+        <section id="ideas" *ngIf="this.paintingsNames as paintings">
+            <p>Has {{paintings.length}} paintings added </p>
+            <ng-container *ngFor="let painting of paintings">
+                <a class="font-weight-bold link" href="/painting/details/{{painting.id}}">{{painting.data().title}}</a>
+            </ng-container>
+        </section>
+    </div>
+</main>
+
+<main *ngIf="IsEditing">
+    <form (ngSubmit)="onSubmit()" [formGroup]="profilePicForm" class="form-user col-md-7">
+        <div class="form-label-group formGroupItem">
+            <label for="picture">URL:</label>
+            <input type="text" id="picture" name="picture" class="form-control" placeholder="Image URL..." required
+                formControlName="picture">
+            <div *ngIf="f.picture.errors?.required && 
+            f.picture.touched">
+                <p class="text-danger">Image URL is required!</p>
+            </div>
+        </div>
+        <div id="btnDiv">
+            <button id="editButton">
+                <ng-container *ngIf="loading">
+                    <app-loader></app-loader>
+                </ng-container>
+                <ng-container *ngIf="!loading">
+                    Apply image
+                </ng-container>
+            </button>
+        </div>
+    </form>
+    <hr>
+    <div id="imagePreview">
+        <p>Preview:</p>
+        <img [src]="f.picture.value" alt="Picture">
+    </div>
+</main>

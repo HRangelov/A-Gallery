@@ -1,0 +1,40 @@
+<div class="container home some" *ngIf="!IsPaintingFound">
+    <app-notfound></app-notfound>
+</div>
+
+<div class="container home some" *ngIf="isPaintingLoaded">
+    <h2 class="display-5 title">{{paintingModel.title}}</h2>
+    <img class="det-img" src="{{paintingModel.imageURL}}" />
+    <div *ngFor="let description of paintingDescriptionList">
+        <p class="idea-description">{{description}}</p>
+    </div>
+
+    <hr class="line">
+    <div>
+        <p class="infoType likes">Likes: {{paintingModel.likes}}</p>
+
+        <ng-container>
+            <div *ngIf="IsUserPublisher(paintingModel.creatorId)" class="text-center m-0 ">
+                <a class="btn bg-info col-2" [routerLink]="editLink">Edit</a>
+                <a class="btn bg-danger col-2" (click)="deletePainting()">Delete</a>
+            </div>
+            <form *ngIf="!IsUserPublisher(paintingModel.creatorId)" class="text-center" [formGroup]="commentform">
+                <textarea class="textarea-det" name="newComment" formControlName="newComment" rows="2"
+                    placeholder="Comment here..." required></textarea>
+                <div>
+                    <button [disabled]="!this.f.newComment.valid" type="submit" class="btn detb"
+                        (click)="this.commentPainting(paintingModel)">Comment</button>
+                    <a class="btn detb infoType likes" (click)="likePainting(paintingModel)">Like</a>
+                </div>
+            </form>
+        </ng-container>
+        <p></p>
+        <p class="infoType">Comments:</p>
+        <p *ngIf="!comments$?.length" class="comments comment">No comments yet</p>
+        <ul class="comments mb-5 pb-5">
+            <ng-container *ngFor="let comment of comments$?.reverse()">
+                <li class="comment">{{comment.Username}}: {{comment.Content}}</li>
+            </ng-container>
+        </ul>
+    </div>
+</div>

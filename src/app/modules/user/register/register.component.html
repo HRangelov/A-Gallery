@@ -1,0 +1,59 @@
+<div class="container home wrapper my-md-5 pl-md-5">
+    <div class="row-form d-md-flex flex-mb-equal">
+      <div class="col-md-6">
+        <img class="responsive" src="....." alt="">
+      </div>
+      <form (ngSubmit)="onSubmit()" [formGroup]="registerForm" class="form-user col-md-7">
+        <div class="text-center mb-4">
+          <h1 class="h3 mb-3 font-weight-normal">Register</h1>
+        </div>
+        <div class="form-label-group formGroupItem">
+          <label for="inputEmail">Email</label>
+          <input type="text" id="inputEmail" name="email" class="form-control" placeholder="Email" required
+            formControlName="email">
+          <div *ngIf="f.email.errors != null">
+            <div *ngIf="f.email.errors.required && f.email.touched">
+              <p class="text-danger">Email is required!</p>
+            </div>
+            <div *ngIf="f.email.errors.email && f.email.touched">
+              <p class="text-danger">Invalid Email!</p>
+            </div>
+          </div>
+        </div>
+        <div class="form-label-group formGroupItem mt-3">
+          <label for="inputPassword">Password</label>
+          <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Password"
+            required="" formControlName="password">
+            <div *ngIf="f.password.errors != null">
+              <div *ngIf="!f.password.errors?.minlength?.actuallength && f.password.touched">
+                <p>{{this.f.password.errors?.minlength?.actuallength}}</p>
+                <p class="text-danger font-weight-bold">Password must be at least 6 characters!</p>
+              </div>
+            </div>
+        </div>
+        <div class="form-label-group formGroupItem mt-3">
+          <label for="inputRepeatPassword">Repeat Password</label>
+          <input type="password" id="inputRepeatPassword" name="repeatPassword" class="form-control"
+            placeholder="Repeat Password" required="" formControlName="repassword">
+          <div *ngIf="f.repassword.errors != null">
+            <div *ngIf="f.repassword.value !== f.password.value && f.repassword.touched">
+              <p class="text-danger">Passwords do not match!</p>
+            </div>
+          </div>
+  
+          <div>
+            <button [disabled]="!registerForum.valid" *ngIf="!loading" class="btn btn-lg btn-dark btn-block"
+              type="submit">Sign Up</button>
+            <button *ngIf="loading" class="btn btn-lg btn-dark btn-block" type="submit">
+              <app-loader></app-loader>
+            </button>
+          </div>
+        </div>
+        <div class="text-center mb-4">
+          <p class="alreadyUser"> If you have an account? 
+            <a routerLink="/login">Sign In</a>!
+          </p>
+        </div>
+      </form>
+    </div>
+  </div>

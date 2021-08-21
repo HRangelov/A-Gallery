@@ -1,0 +1,134 @@
+.some {
+    margin-bottom: 2em;
+    max-width: 90%;
+    text-align: center;
+  }
+  
+  .form-label-group label {
+    margin: 1em;
+  }
+  .idea-description {
+    width: 80%;
+    text-align: center;
+  }
+  .responsive-ideas {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+  }
+  
+  .form-idea {
+    color: black;
+    height: 80%;
+  }
+  
+  .image-holder {
+    align-content: center;
+  }
+  
+  .overflow-hidden {
+    overflow: hidden;
+  }
+  
+  .infoType {
+    text-decoration: underline;
+  }
+  
+  .likes {
+    font-style: italic;
+  }
+  
+  .details-img {
+    width: 40%;
+    height: auto;
+    margin: 0 auto;
+    transform: none;
+    border: 1px solid black;
+  }
+  
+  .det {
+    color: white;
+  }
+  .comment {
+    list-style-type: none;
+    text-align: left;
+    padding: 1%;
+  }
+  
+  .comments {
+    margin: 0 auto;
+    width: 50%;
+  }
+  
+  .btn-something {
+    width: 40%;
+    margin: 10px;
+    color: white;
+    display: inline-block;
+  }
+  .btn-holder {
+    width: 60%;
+    margin-left: inherit;
+  }
+  .like-btn {
+    background-color: rgba(42, 99, 54, 0.719);
+  }
+  .com-btn {
+    background-color: rgba(26, 49, 83, 0.924);
+  }
+  
+  .btn {
+    width: 20%;
+    margin: 0em 2em;
+  }
+  
+  .edit-btn {
+    background-color: rgb(165, 140, 0);
+  }
+  
+  .desc {
+    margin: 2%;
+    display: inline-block;
+    width: 40%;
+    vertical-align: top;
+    color: black;
+  }
+  .det-img {
+    margin: 1em;
+    width: 30%;
+    transform: none;
+    border: 1px solid black;
+  }
+  .detb {
+    margin: 10px;
+  }
+  
+  .blink {
+    animation: blinker 0.4s linear 0.1s;
+  }
+  
+  @keyframes blinker {
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  .line {
+    background-color: black;
+    width: 70%;
+  }
+  
+  form > textarea {
+    width: 50%;
+  }
+  
+  .title {
+    cursor: pointer;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+  }
+  

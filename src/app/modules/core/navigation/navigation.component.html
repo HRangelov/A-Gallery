@@ -1,0 +1,58 @@
+<nav class="navigation">
+    <article class="navigation-logo-wrapper">
+        <h1 class="navigation-logo" routerLink="/">
+            A-Gallery
+        </h1>
+        <span class="navigation-slogan">
+            Art is here
+        </span>
+    </article>
+    <article class="navigation-list-items">
+        <ul class="navigation-list">
+            <li class="navigation-list-item">
+                <a class="navigation-list-item-link" routerLink="/" >
+                    home page
+                </a>
+            </li>
+            <li class="navigation-list-item">
+                <a class="navigation-list-item-link" routerLink="/paintings-list">
+                    Paintings
+                </a>
+            </li>
+            <li class="navigation-list-item">
+                <a class="navigation-list-item-link" routerLink="/artists">
+                    Artists
+                </a>
+            </li>
+            <li class="navigation-list-item">
+                <a class="navigation-list-item-link" routerLink="/add-painting">
+                    Add Painting
+                </a>
+            </li>
+            <li class="navigation-list-item">
+                <a class="navigation-list-item-link" href="#">
+                    contact us
+                </a>
+            <li *ngIf= "!isLogged" class="navigation-list-item login">
+                <a class="navigation-list-item-link" routerLink="/login">
+                    Login
+                </a>
+            <li *ngIf= "!isLogged" class="navigation-list-item register">
+                <a class="navigation-list-item-link" routerLink="/register">
+                    Register
+                </a>
+            </li>
+            <li *ngIf= "isLogged" class="navigation-list-item logout">
+                <!-- <p>Welcome {{username}}</p> -->
+                <a routerLink="/profile">Profile
+            
+                </a>
+            </li>
+            <li *ngIf= "isLogged" class="navigation-list-item">
+                <a class="navigation-list-item-link" (click)="logout()">Logout </a>
+            </li>
+        </ul>
+    </article>
+</nav>
+
+
