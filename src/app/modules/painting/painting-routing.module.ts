@@ -26,4 +26,4 @@ const routes: Routes = [
   }
 ]
 
-export const IdeaRoutingModule = RouterModule.forChild(routes);
+export const PaintingRoutingModule = RouterModule.forChild(routes);

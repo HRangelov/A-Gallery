@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Observable, of } from 'rxjs';
-import { AuthService } from 'src/app/services/auth.service';
-import { DataService } from 'src/app/services/data.service';
+import { AuthService } from 'src/app/shared/services/auth.service';
+import { DataService } from 'src/app/shared/services/data.service';
 import { map } from 'rxjs/internal/operators/map';
 // import { ToastrService } from 'ngx-toastr';
 

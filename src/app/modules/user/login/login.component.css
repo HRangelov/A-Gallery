@@ -1,0 +1,18 @@
+.form-user {
+    color: black;
+    margin: 2em 3em;
+  }
+  @media only screen and (min-width: 780px) {
+    .row-form {
+      position: relative;
+      float: center;
+      top: 20%;
+    }
+  }
+  .btn {
+    border: none;
+    margin-top: 1em;
+    color: black;
+    background-color: rgba(255, 157, 0, 0.959)
+  }
+  

@@ -1,1 +1,48 @@
-<p>login works!</p>
+<div class="container home wrapper my-md-5 pl-md-5">
+    <div class="row-form d-md-flex flex-mb-equal mt-5">
+      <div class="col-md-6">
+        <img class="responsive" src="....." alt="">
+      </div>
+      <form (ngSubmit)="onSubmit()" [formGroup]="loginForm" class="form-user col-md-7">
+        <div class="text-center mb-4">
+          <h1 class="h3 mb-3 font-weight-normal">Login</h1>
+        </div>
+        <div class="form-label-group formGroupItem">
+          <label for="inputEmail">Email</label>
+          <input type="text" id="inputEmail" name="email" class="form-control" placeholder="Email" required
+            formControlName="email">
+          <div *ngIf="f.email.errors != null">
+            <div *ngIf="f.email.errors.required && f.email.touched">
+              <p class="text-danger">Email is required!</p>
+            </div>
+            <div *ngIf="f.email.errors.email && f.email.touched">
+              <p class="text-danger">Invalid Email!</p>
+            </div>
+          </div>
+        </div>
+        <div class="form-label-group formGroupItem mt-3">
+          <label for="inputPassword">Password</label>
+          <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Password"
+            required="" formControlName="password">
+          <div *ngIf="f.password.errors != null">
+            <div *ngIf="!f.password.errors?.minlength?.actuallength && f.password.touched">
+              <p>{{this.f.password.errors?.minlength?.actuallength}}</p>
+              <p class="text-danger font-weight-bold">Password must be minimum 6 characters long!</p>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mb-4 text-center">
+          <div>
+            <button [disabled]="!this.loginForm.valid" *ngIf="!loading" class="btn btn-lg btn-block" type="submit">Sign
+              In</button>
+            <button *ngIf="loading" class="btn btn-lg btn-dark btn-block" type="submit">
+              <app-loader></app-loader>
+            </button>
+          </div>
+  
+          <p class="alreadyUser pt-3"> Don't have an account? <a routerLink="/register">Sign Up</a> now!
+          </p>
+        </div>
+      </form>
+    </div>
+  </div>

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, Validators, FormBuilder } from '@angular/forms';
 // import { ToastrService } from 'ngx-toastr';
-import { DataService } from 'src/app/services/data.service';
+import { DataService } from 'src/app/shared/services/data.service';
 
 @Component({
   selector: 'app-create',

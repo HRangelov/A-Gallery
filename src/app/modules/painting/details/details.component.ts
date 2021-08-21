@@ -3,8 +3,8 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 // import { ToastrService } from 'ngx-toastr';
 import { Painting } from 'src/app/shared/models/Painting';
-import { AuthService } from 'src/app/services/auth.service';
-import { DataService } from 'src/app/services/data.service';
+import { AuthService } from 'src/app/shared/services/auth.service';
+import { DataService } from 'src/app/shared/services/data.service';
 import { Comment } from 'src/app/shared/models/Comment';
 
 @Component({

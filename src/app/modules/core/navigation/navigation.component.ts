@@ -9,6 +9,9 @@ import { AuthService } from 'src/app/shared/services/auth.service';
 })
 export class NavigationComponent implements OnInit {
   public isLogingOut = false;
+  isLogged() {
+    
+  }
   // get username(): string {
   //   return this.userService.user?.username || '';
   // }
