@@ -15,40 +15,41 @@
                 </a>
             </li>
             <li class="navigation-list-item">
-                <a class="navigation-list-item-link" routerLink="/paintings-list">
+                <a class="navigation-list-item-link" routerLink="/dashboard">
                     Paintings
                 </a>
             </li>
-            <li class="navigation-list-item">
+            <!-- <li class="navigation-list-item">
                 <a class="navigation-list-item-link" routerLink="/artists">
                     Artists
                 </a>
-            </li>
+            </li> -->
             <li class="navigation-list-item">
-                <a class="navigation-list-item-link" routerLink="/add-painting">
+                <a class="navigation-list-item-link" routerLink="/painting/create">
                     Add Painting
                 </a>
             </li>
-            <li class="navigation-list-item">
+            <!-- <li class="navigation-list-item">
                 <a class="navigation-list-item-link" href="#">
                     contact us
                 </a>
-            <li *ngIf= "!isLogged" class="navigation-list-item login">
+            </li> -->
+            <li *ngIf="!authService.isLoggedIn" class="navigation-list-item login">
                 <a class="navigation-list-item-link" routerLink="/login">
                     Login
                 </a>
-            <li *ngIf= "!isLogged" class="navigation-list-item register">
+            <li *ngIf="!authService.isLoggedIn" class="navigation-list-item register">
                 <a class="navigation-list-item-link" routerLink="/register">
                     Register
                 </a>
             </li>
-            <li *ngIf= "isLogged" class="navigation-list-item logout">
+            <li *ngIf="authService.isLoggedIn" class="navigation-list-item logout">
                 <!-- <p>Welcome {{username}}</p> -->
                 <a routerLink="/profile">Profile
             
                 </a>
             </li>
-            <li *ngIf= "isLogged" class="navigation-list-item">
+            <li *ngIf="authService.isLoggedIn" class="navigation-list-item">
                 <a class="navigation-list-item-link" (click)="logout()">Logout </a>
             </li>
         </ul>

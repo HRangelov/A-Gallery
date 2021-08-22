@@ -6,13 +6,13 @@
         </div>
         <div class="form-label-group formGroupItem">
           <label for="ideaTitle">Title</label>
-          <input type="text" id="title" name="title" class="form-control" placeholder="What is your idea?" required
+          <input type="text" id="title" name="title" class="form-control" placeholder="What is the name of your painting?" required
             minlength="6" formControlName="title">
   
           <div *ngIf="this.createForm.controls.title.errors != null">
             <div
               *ngIf="this.createForm.controls.title.errors?.minlength?.actuallength !== 6 && this.createForm.controls.title.touched">
-              <p class="text-danger">Your Title must be at least 6 charachter long!</p>
+              <p class="text-danger">Painting name must be at least 6 charachter long!</p>
             </div>
           </div>
         </div>
