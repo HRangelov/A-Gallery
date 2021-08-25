@@ -2,7 +2,7 @@
     color: black;
     margin: 2em;
   }
-  @media only screen and (min-width: 780px) {
+  @media all and (min-width: 780px) {
     .row-form {
       position: relative;
       float: center;
