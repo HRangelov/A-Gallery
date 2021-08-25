@@ -67,7 +67,7 @@ console.log(obj);
     this.dataService
   .editPainting(obj, this.route.snapshot.params.id)
   .then((data) => {
-    this.router.navigate([`/painting/detail/${this.route.snapshot.params.id}`]);
+    this.router.navigate([`/painting/details/${this.route.snapshot.params.id}`]);
     console.log(data);
   })
   .catch((err) => {

@@ -59,7 +59,7 @@ export class DetailsComponent implements OnInit {
         let description = data.data().description;
         this.paintingDescriptionList = description.split('\n');
         this.isPaintingLoaded = true;
-        // this.toastr.success("Idea loaded.");
+        // this.toastr.success("Painting loaded.");
       })
   }
 

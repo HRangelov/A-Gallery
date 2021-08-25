@@ -22,9 +22,9 @@
                 <textarea class="textarea-det" name="newComment" formControlName="newComment" rows="2"
                     placeholder="Comment here..." required></textarea>
                 <div>
-                    <button [disabled]="!this.f.newComment.valid" type="submit" class="btn detb"
+                    <button [disabled]="!this.f.newComment.valid" type="submit" class="btn bg-info col-2"
                         (click)="this.commentPainting(paintingModel)">Comment</button>
-                    <a class="btn detb infoType likes" (click)="likePainting(paintingModel)">Like</a>
+                    <a class="btn bg-info col-2" (click)="likePainting(paintingModel)">Like</a>
                 </div>
             </form>
         </ng-container>
