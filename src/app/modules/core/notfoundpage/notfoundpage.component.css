@@ -1,50 +1,61 @@
-.home{
-    background-color:rgba(0, 0, 0, 0.308);
-    margin: 0.5em auto;
-    margin-top: 5em;
-   }
    
-   .responsive {
-     width: 100%;
-     /* max-width: 400px; */
-     height: auto;
-   }
-   .btn{
-     background-color: rgb(108, 107, 110);
-   }
-   .home-text{
-     color:white;
-   }
-   .wrapper {
-     position: relative;
-     padding:2em;
-   }
-   
-   .wrapper .bottom {
-     position: relative;
-     width: 100%;
-     top: 25%;
-   }
-   
-   .btn{
-     min-width: 20%;
-   }
-   
-   textarea {
-     resize: none;
-       width: 100%;
-       height: 6em;
-   }
-   
-   .btn {
-     font-weight: bold;
-     color: white;
-     text-transform: uppercase;
-     letter-spacing: 1px;
-     cursor: pointer;
-   }
-   
-   .btn:hover {
-     filter: brightness(90%);
-     color: white;
-   }
+   @import url('https://use.fontawesome.com/releases/v5.15.3/css/all.css');
+   * {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  
+
+  #notfound .notfound {
+    margin: 2px auto;
+  }
+  
+  .notfound {
+    max-width: 767px;
+    width: 100%;
+    line-height: 1.4;
+    text-align: center;
+    padding: 15px;
+  }
+  
+  .notfound .notfound-404 {
+    position: relative;
+    height: 220px;
+  }
+  
+  .notfound .notfound-404 h1 {
+    font-family: 'Kanit', sans-serif;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    font-size: 186px;
+    font-weight: 200;
+    margin: 0px;
+    background: linear-gradient(130deg, #ffa34f, #2cbce7);
+    color:transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-transform: uppercase;
+  }
+  
+  .notfound h2 {
+    font-family: 'Kanit', sans-serif;
+    font-size: 33px;
+    font-weight: 200;
+    text-transform: uppercase;
+    margin-top: 0px;
+    margin-bottom: 25px;
+    letter-spacing: 3px;
+  }
+  
+  
+  .notfound p {
+    font-family: 'Kanit', sans-serif;
+    font-size: 16px;
+    font-weight: 200;
+    margin-top: 0px;
+    margin-bottom: 25px;
+  }
