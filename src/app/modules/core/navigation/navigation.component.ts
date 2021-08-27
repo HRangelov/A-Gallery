@@ -13,6 +13,7 @@ export class NavigationComponent implements OnInit {
   isLogged() {
     
   }
+  // TODO welcome message
   // get username(): string {
   //   return this.userService.user?.username || '';
   // }

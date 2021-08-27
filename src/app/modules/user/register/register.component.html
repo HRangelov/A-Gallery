@@ -1,8 +1,8 @@
 <div class="container home wrapper my-md-5 pl-md-5">
     <div class="row-form d-md-flex flex-mb-equal">
-      <div class="col-md-6">
+      <!-- <div class="col-md-6">
         <img class="responsive" src="../../../../assets/images/register-pic.jpg" alt="">
-      </div>
+      </div> -->
       <form (ngSubmit)="onSubmit()" [formGroup]="registerForm" class="form-user col-md-7">
         <div class="text-center mb-4">
           <h1 class="h3 mb-3 font-weight-normal">Register</h1>
@@ -42,7 +42,7 @@
           </div>
   
           <div>
-            <button [disabled]="!registerForum.valid" *ngIf="!loading" class="btn btn-lg btn-dark btn-block"
+            <button [disabled]="!this.registerForm.valid" *ngIf="!loading" class="btn btn-lg btn-dark btn-block"
               type="submit">Sign Up</button>
             <button *ngIf="loading" class="btn btn-lg btn-dark btn-block" type="submit">
               <app-loader></app-loader>

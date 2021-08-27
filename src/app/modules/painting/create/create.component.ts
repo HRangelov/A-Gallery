@@ -3,7 +3,6 @@ import { FormGroup, Validators, FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
 import { DataService } from '../../../shared/services/data.service';
 // import { ToastrService } from 'ngx-toastr';
-// import { DataService } from 'src/app/shared/services/data.service';
 
 @Component({
   selector: 'app-create',
@@ -40,7 +39,7 @@ export class CreateComponent implements OnInit {
         this.f.description.value,
         this.f.imageURL.value)
       .then((data) => {
-        // this.toastr.success("Idea added!");
+        // this.toastr.success("Painting has been added!");
         this.loading = false;
         this.createForm.reset();
         this.router.navigate(['/']);

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
-import { AuthService } from 'src/app/shared/services/auth.service';
+import { AuthService } from '../../../shared/services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -12,7 +12,7 @@ import { AuthService } from 'src/app/shared/services/auth.service';
 
 export class LoginComponent implements OnInit {
 
-  // loginForm: NgForm;
+  
   loginForm: FormGroup;
   notificationMessage: string;
   loading = false;
@@ -28,7 +28,7 @@ export class LoginComponent implements OnInit {
       password: ['', [Validators.required, Validators.minLength(6)]]
     });
 
-    // TODO: add redirect guard
+    // Redirect guard if not LoggedIn
     if (this.authService.isLoggedIn) {
       this.router.navigate(['/']);
     }

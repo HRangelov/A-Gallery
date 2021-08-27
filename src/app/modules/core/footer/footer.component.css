@@ -8,7 +8,7 @@ article {
     font-size: 15px;
   }
   .nf a {
-    font-family: 'Kanit', sans-serif;
+    font-family: sans-serif;
     color:white ;
     font-weight: 200;
     text-decoration: none;
@@ -21,7 +21,7 @@ article {
     height: 40px;
     line-height: 40px;
     width: 40px;
-    font-size: 14px;
+    font-size: 20px;
     color: #fcfafa;
     border: 1px solid #efefef;
     border-radius: 50%;

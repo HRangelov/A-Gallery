@@ -82,6 +82,7 @@ export class DataService {
   }
 
   removePaintingById(id: string) {
+    // TODO
     // this.toastr.warning("Deleting idea...");
     this.PaintingCollection.doc(id).delete()
       .then((data) => {
@@ -131,6 +132,7 @@ export class DataService {
       Timespan: Date.now()
     }
     let commentId = uuidv4();
+    // TODO Notification to the user
     // this.toastr.info("Adding comment");
     this.CommentsCollection.doc(commentId)
       .set(comment)

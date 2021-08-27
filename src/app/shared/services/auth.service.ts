@@ -18,6 +18,8 @@ export class AuthService {
     public afAuth: AngularFireAuth, // Inject Firebase auth service
     public router: Router,
     public ngZone: NgZone,
+    
+    // TODO to a string message to the user
     // private toastr: ToastrService // NgZone service to remove outside scope warning
   ) {
     /* Saving user data in localstorage when 
@@ -50,6 +52,7 @@ export class AuthService {
         this.router.navigateByUrl(returnUrl);
       }).catch((error) => {
         // this.toastr.error(error.message);
+        window.alert(error.message);
       })
   }
   
@@ -81,6 +84,7 @@ export class AuthService {
         });
       }).catch((error) => {
         // this.toastr.error(error.message);
+        window.alert(error.message);
       })
   }
  
@@ -197,7 +201,7 @@ export class AuthService {
     let newPhoto:UserInfo = {
       photoUrl:photoUrl
     };
-    
+    // TODO
     // this.toastr.info("Updating picture...")
     return this.afs.collection<UserInfo>("userInfo").doc(this.GetUserId)
     .set(newPhoto)

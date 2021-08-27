@@ -6,9 +6,10 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { HttpClientModule } from '@angular/common/http';
-import { environment } from 'src/environments/environment';
+import { environment } from '../environments/environment';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+// TODO notification to user
 // import { ToastrModule } from 'ngx-toastr';
 
 import { AngularFireAuthModule, AngularFireAuth } from "@angular/fire/auth";
@@ -36,10 +37,11 @@ import { CoreModule } from './modules/core/core.module';
     UserModule,
     PaintingModule,
     BrowserAnimationsModule,
+    // TODO test the configuration of ToastrModule
     // ToastrModule.forRoot({
     //   autoDismiss: true,
     //   maxOpened: 2,
-    //   timeOut: 1500,
+    //   timeOut: 1200,
     //   easeTime: 200,
     //   newestOnTop: false
     // }),

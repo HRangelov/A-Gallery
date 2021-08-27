@@ -2,10 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 // import { ToastrService } from 'ngx-toastr';
-import { Painting } from 'src/app/shared/models/Painting';
-import { AuthService } from 'src/app/shared/services/auth.service';
-import { DataService } from 'src/app/shared/services/data.service';
-import { Comment } from 'src/app/shared/models/Comment';
+import { Painting } from '../../../shared/models/Painting';
+import { AuthService } from '../../../shared/services/auth.service';
+import { DataService } from '../../../shared/services/data.service';
+import { Comment } from '../../../shared/models/Comment';
 
 @Component({
   selector: 'app-details',
@@ -31,7 +31,7 @@ export class DetailsComponent implements OnInit {
     // private toastr: ToastrService
     ) {
 
-    // this.toastr.info("Loading idea");
+    // this.toastr.info("Loading painting");
     this.commentform = this.fb.group({
       newComment: ['',Validators.required]
     });
@@ -82,6 +82,7 @@ export class DetailsComponent implements OnInit {
   likePainting(painting: Painting) {
     this.dataService.likePainting(this.route.snapshot.params.id,painting);
   }
+  
   commentPainting(painting: Painting) {
     this.dataService.commentPainting(this.route.snapshot.params.id, this.commentform.controls.newComment.value)
     this.commentform.reset();

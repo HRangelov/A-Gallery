@@ -2,12 +2,12 @@
     background-color:rgba(218, 218, 218, 0.363);
     margin: 0.5em auto;
     margin-top: 15px;
-    /* background-image: url("/src/assets/images/home-page-pic.jpg"); */
+    
    }
    
    .responsive {
      width: 100%;
-     /* max-width: 400px; */
+     
      height: auto;
    }
    .btn{

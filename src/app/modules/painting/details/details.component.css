@@ -63,7 +63,7 @@
   .btn-something {
     width: 40%;
     margin: 10px;
-    color: white;
+    color: rgba(253, 152, 0, 0.795);
     display: inline-block;
   }
   .btn-holder {
@@ -71,10 +71,10 @@
     margin-left: inherit;
   }
   .like-btn {
-    background-color: rgba(42, 99, 54, 0.719);
+    background-color: rgba(214, 129, 16, 0.719);
   }
   .com-btn {
-    background-color: rgba(26, 49, 83, 0.924);
+    background-color: rgba(19, 100, 221, 0.924);
   }
   
   .btn {
@@ -83,7 +83,7 @@
   }
   
   .edit-btn {
-    background-color: rgb(165, 140, 0);
+    background-color: rgba(214, 129, 16, 0.719);
   }
   
   .desc {
@@ -122,13 +122,4 @@
     width: 50%;
   }
   
-  .title {
-    cursor: pointer;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    -o-user-select: none;
-    user-select: none;
-  }
-  
+ 

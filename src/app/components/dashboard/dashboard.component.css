@@ -42,13 +42,13 @@
     box-shadow: 0 0 1.5rem 0 rgba(0, 0, 0, 0.712);
   }
   .current-card:nth-child(3n-1) {
-    border-color: rgb(153, 221, 75);
+    border-color: rgb(221, 187, 75);
   }
   .current-card:nth-child(3n-2) {
     border-color: rgb(93, 199, 231);
   }
   .current-card:nth-child(3n-3) {
-    border-color: rgb(231, 194, 93);
+    border-color: rgb(231, 93, 100);
   }
   
   #dashboard-holder {
@@ -63,5 +63,10 @@
     margin-top: 20px;
     color: black;
     font-size: 18px;
+    padding: 5px;
+  }
+  #dashboard-holder .btn:hover {
+    color:rgb(93, 199, 231)
+
   }
   
