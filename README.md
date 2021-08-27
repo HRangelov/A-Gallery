@@ -36,12 +36,11 @@ List of features ready and TODOs for future development
 * Like (thumbs up) functionality (only for registered users)
 * Comment section for every painting (only for registered users)
 * Browsing through the list of published paintings
-TODOs
-* Admin part with full CRUD functionality.
+
 
 There are two levels of access:
-*Registered user - CRUD of created by the user content
-*Anonymous user - limited read functionalities
+* Registered user - CRUD of created by the user content
+* Anonymous user - limited read functionalities
 
 ## Status
 Project is: _in progress_
