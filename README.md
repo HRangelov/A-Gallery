@@ -23,7 +23,7 @@ Not uploaded yet
 ## Technologies
 * Angular - version 
 * Firebase - version
-* TypeScript - version 2.3.1
+* TypeScript - version 
 
 
 ## Setup
